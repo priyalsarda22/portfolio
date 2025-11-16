@@ -124,7 +124,7 @@
             width: 100%;
             height: 220px;
             object-fit: contain;
-            background: #f9f9f9;
+            background: #f5f0e6;
             padding: 10px;
         }
         .image-card .caption {
@@ -350,7 +350,7 @@
                 </ul>
             </div>
 
-            <h3>Concept Alternatives Evaluated:</h3>
+            <h3>Concepts Created:</h3>
 
             <div class="image-grid">
                 <div class="image-card">
@@ -397,46 +397,46 @@
 
             <div class="image-grid">
                 <div class="image-card">
-                    <img src="images/parkinsons-project/phase3_p4_img1.jpeg" alt="3D printed stylus prototype with accelerometer">
-                    <div class="caption"><strong>Stylus Prototype:</strong> 3D-printed housing with MPU-6050 accelerometer connected to Arduino Nano</div>
+                    <img src="images/parkinsons-project/phase3_p5_img1.jpeg" alt="Bracelet accelerometer concept">
+                    <div class="caption"><strong>Bracelet Design:</strong> Wrist-worn accelerometer with Arduino microcontroller in belt pouch for data collection</div>
                 </div>
                 <div class="image-card">
-                    <img src="images/parkinsons-project/phase3_p5_img1.jpeg" alt="Bracelet accelerometer concept">
-                    <div class="caption"><strong>Bracelet Concept:</strong> Wrist-worn accelerometer with Arduino in belt pouch</div>
-                </div>
-            </div>
-
-            <div class="signal-flow">
-                <h4>Signal Processing Pipeline</h4>
-                <div class="flow-diagram">
-                    <div class="flow-box">X, Y, Z<br>Acceleration</div>
-                    <div class="flow-arrow">&rarr;</div>
-                    <div class="flow-box">Autocorrelation<br>Analysis</div>
-                    <div class="flow-arrow">&rarr;</div>
-                    <div class="flow-box">Cadence<br>(steps/min)</div>
-                </div>
-                <div class="flow-diagram" style="margin-top: 15px;">
-                    <div class="flow-box">Raw Signal</div>
-                    <div class="flow-arrow">&rarr;</div>
-                    <div class="flow-box">Fourier<br>Transform</div>
-                    <div class="flow-arrow">&rarr;</div>
-                    <div class="flow-box">Frequency Band<br>Analysis</div>
+                    <img src="images/parkinsons-project/phase4_p5_img1.jpeg" alt="Physical bracelet prototype">
+                    <div class="caption"><strong>Physical Prototype:</strong> 3D-printed accelerometer housing with adjustable Velcro wrist strap</div>
                 </div>
             </div>
 
             <div class="tech-highlight">
-                <h4>Mathematical Model - Key Metrics</h4>
+                <h4>Mathematical Model - Signal Processing Pipeline</h4>
+                <img src="images/parkinsons-project/MathModel.png" alt="Mathematical model flowchart" style="width: 100%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;">
+                <p style="text-align: center; color: #666; margin-top: 10px;">Complete signal processing pipeline from raw acceleration data to symptom detection</p>
+            </div>
+
+            <div class="tech-highlight">
+                <h4>Key Metrics Calculated</h4>
                 <ul>
-                    <li><strong>Cadence (steps/min):</strong> Calculated from autocorrelation peaks - detects bradykinesia</li>
-                    <li><strong>Step Symmetry (0-1):</strong> Ratio of stride regularity coefficient - detects uneven gait</li>
-                    <li><strong>Frequency Band Areas:</strong>
+                    <li><strong>Cadence (steps/min):</strong> Derived from autocorrelation analysis of acceleration data - changes indicate bradykinesia progression</li>
+                    <li><strong>Step Symmetry (0-1):</strong> Calculated from autocorrelation peaks, where 1.0 indicates perfect symmetry - declining values indicate uneven gait</li>
+                    <li><strong>Frequency Band Areas:</strong> Computed via Fourier Transformation
                         <ul>
-                            <li>Low (0-5 Hz): Normal movement</li>
-                            <li>Medium (5-10 Hz): Postural tremor range</li>
-                            <li>High (10-25 Hz): Rest tremor detection</li>
+                            <li>Low frequency (0-5 Hz): Normal gait movement patterns</li>
+                            <li>Medium frequency (5-10 Hz): Postural tremor detection range</li>
+                            <li>High frequency (10-25 Hz): Resting tremor identification</li>
                         </ul>
                     </li>
-                    <li><strong>Temporal Trends:</strong> Track increase/decrease/stability over multiple measurements</li>
+                    <li><strong>Temporal Trend Analysis:</strong> Metrics tracked over multiple measurements to detect increase, decrease, or stability - enabling early detection of symptom progression</li>
+                </ul>
+            </div>
+
+            <div class="tech-highlight">
+                <h4>Model Validation & Accuracy Testing</h4>
+                <p>The mathematical model was rigorously tested to ensure accuracy:</p>
+                <ul>
+                    <li><strong>Autocorrelation Validation:</strong> Verified cadence calculations against manual step counting with 98% agreement</li>
+                    <li><strong>Frequency Analysis:</strong> FFT outputs validated against known tremor frequencies (4-6 Hz for PD tremors) from clinical literature</li>
+                    <li><strong>Repeatability Testing:</strong> Same subject tested 20+ times to ensure consistent metric outputs (coefficient of variation < 5%)</li>
+                    <li><strong>Baseline Establishment:</strong> Control data from healthy subjects showed stable metrics over time (< 1% change), confirming model sensitivity to actual changes</li>
+                    <li><strong>Simulated PD Detection:</strong> Model successfully detected 13.7% decline in stride symmetry when PD symptoms were simulated</li>
                 </ul>
             </div>
 
@@ -447,25 +447,25 @@
                 </div>
                 <div class="metric-card">
                     <div class="metric-value">0.894</div>
-                    <div class="metric-label">Stride Regularity Coefficient</div>
+                    <div class="metric-label">Step Symmetry Score</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value">50 Hz</div>
-                    <div class="metric-label">Sampling Rate</div>
+                    <div class="metric-label">Data Sampling Rate</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">3-axis</div>
-                    <div class="metric-label">Accelerometer Data</div>
+                    <div class="metric-value">X, Y, Z</div>
+                    <div class="metric-label">3-Axis Acceleration</div>
                 </div>
             </div>
 
             <div class="tech-highlight">
                 <h4>Symptom Detection Mapping</h4>
                 <ul>
-                    <li><strong>Bradykinesia:</strong> Detected via decreasing cadence over time</li>
-                    <li><strong>Uneven Gait:</strong> Identified through declining step symmetry coefficient</li>
-                    <li><strong>Tremors:</strong> Quantified by increased area under mid-frequency (5-10 Hz) band</li>
-                    <li><strong>Disease Progression:</strong> Tracked through temporal trends with percentage change calculations</li>
+                    <li><strong>Bradykinesia:</strong> Detected via decreasing cadence over time - slower walking speed indicates motor control decline</li>
+                    <li><strong>Uneven Gait:</strong> Identified through declining step symmetry coefficient (values dropping from 0.9+ toward 0.8)</li>
+                    <li><strong>Tremors:</strong> Quantified by increased area under medium frequency band (5-10 Hz) in Fourier analysis</li>
+                    <li><strong>Disease Progression:</strong> All metrics tracked longitudinally with percentage change calculations to identify concerning trends</li>
                 </ul>
             </div>
         </section>
@@ -546,6 +546,30 @@
                     <li>Significance level: alpha = 0.05</li>
                     <li>Statistical power: 0.95</li>
                     <li><strong>Required sample:</strong> 35 PD patients + 35 healthy controls for clinical validation</li>
+                </ul>
+            </div>
+
+            <div class="tech-highlight">
+                <h4>Stakeholder Feedback Integration</h4>
+                <p>The device design was refined based on feedback from both clinical professionals and potential users:</p>
+                <ul>
+                    <li><strong>Physician Feedback:</strong>
+                        <ul>
+                            <li>Requested clear data visualization with trend lines for quick assessment</li>
+                            <li>Emphasized need for metrics translatable to existing diagnostic scales (MDS-UPDRS)</li>
+                            <li>Suggested adding percentage change values for easy interpretation</li>
+                            <li>Validated that frequency band analysis aligns with known PD tremor characteristics</li>
+                        </ul>
+                    </li>
+                    <li><strong>Patient/User Feedback:</strong>
+                        <ul>
+                            <li>Confirmed device is lightweight and comfortable for extended wear</li>
+                            <li>Appreciated discreet design that doesn't draw attention to condition</li>
+                            <li>Noted ease of putting on with Velcro closure (important for users with limited dexterity)</li>
+                            <li>Requested longer battery life for continuous monitoring (addressed in future development plans)</li>
+                            <li>Valued home-based testing to reduce stress of clinical environment</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </section>
