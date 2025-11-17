@@ -7,54 +7,61 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .project-hero {
-            background: linear-gradient(135deg, #8b7355 0%, #a89070 100%);
+            background: linear-gradient(135deg, #b8c1ec 0%, #d4c1ec 100%);
             padding: 120px 20px 80px;
             text-align: center;
-            color: white;
+            color: #2d3748;
         }
         .project-hero h1 {
             font-size: 2.8rem;
             margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         .project-hero .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 900px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 850px;
             margin: 0 auto 30px;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #4a5568;
         }
         .tech-tags {
             margin-top: 25px;
         }
         .tech-tags span {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.6);
+            color: #4a5568;
             padding: 8px 16px;
             border-radius: 25px;
             margin: 5px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
         }
         .project-content {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         .phase-section {
-            margin-bottom: 80px;
-            background: #fafafa;
-            padding: 40px;
-            border-radius: 12px;
-            border-left: 5px solid #8b7355;
+            margin-bottom: 60px;
+            background: #fefefe;
+            padding: 45px;
+            border-radius: 16px;
+            border-left: 5px solid #b8c1ec;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
         }
         .phase-header {
             display: flex;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .phase-number {
-            background: #8b7355;
-            color: white;
+            background: linear-gradient(135deg, #b8c1ec 0%, #a8b8d8 100%);
+            color: #2d3748;
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -65,48 +72,56 @@
             font-weight: bold;
             margin-right: 20px;
             flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(184, 193, 236, 0.4);
         }
         .phase-title {
-            font-size: 1.8rem;
-            color: #333;
+            font-size: 1.7rem;
+            color: #2d3748;
             margin: 0;
+            font-weight: 600;
         }
         .phase-subtitle {
-            color: #666;
+            color: #718096;
             margin: 5px 0 0;
             font-size: 1rem;
         }
         .problem-box {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border: 2px solid #8b7355;
+            background: linear-gradient(135deg, #fef5f5 0%, #fff5f8 100%);
+            padding: 28px;
+            border-radius: 12px;
+            border: 2px solid #fbb6ce;
             margin: 25px 0;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
         .problem-box strong {
-            color: #8b7355;
+            color: #c53030;
         }
         .tech-highlight {
             background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
         }
         .tech-highlight h4 {
-            color: #8b7355;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+            color: #553c9a;
+            margin-bottom: 18px;
+            font-size: 1.15rem;
+            font-weight: 600;
         }
         .tech-highlight ul {
             margin: 0;
             padding-left: 20px;
         }
         .tech-highlight li {
-            margin: 8px 0;
-            line-height: 1.5;
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        .tech-highlight li strong {
+            color: #2d3748;
         }
         .image-grid {
             display: grid;
@@ -116,46 +131,57 @@
         }
         .image-card {
             background: white;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .image-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
         .image-card img {
             width: 100%;
             height: 220px;
             object-fit: contain;
-            background: #f5f0e6;
+            background: #f7f5f0;
             padding: 10px;
         }
         .image-card .caption {
-            padding: 15px;
+            padding: 18px;
             font-size: 0.9rem;
-            color: #555;
+            color: #4a5568;
             text-align: center;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #e2e8f0;
+            background: #fafafa;
+            line-height: 1.5;
+        }
+        .image-card .caption strong {
+            color: #553c9a;
         }
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin: 25px 0;
+            margin: 30px 0;
         }
         .metric-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #e9d8fd 0%, #fbb6ce 100%);
+            padding: 25px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         .metric-value {
             font-size: 2rem;
             font-weight: bold;
-            color: #8b7355;
+            color: #553c9a;
             margin-bottom: 8px;
         }
         .metric-label {
-            color: #666;
+            color: #4a5568;
             font-size: 0.9rem;
+            font-weight: 500;
         }
         .signal-flow {
             background: #4a4a4a;
@@ -188,56 +214,77 @@
         }
         .test-results {
             background: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
+            padding: 28px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .test-results h4 {
+            color: #553c9a;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         .result-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
+            padding: 14px 0;
+            border-bottom: 1px solid #e2e8f0;
         }
         .result-item:last-child {
             border-bottom: none;
         }
-        .result-status {
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .result-item span:first-child {
+            color: #4a5568;
             font-weight: 500;
         }
+        .result-status {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
         .status-pass {
-            background: #d4edda;
-            color: #155724;
+            background: #c6f6d5;
+            color: #22543d;
         }
         .status-partial {
-            background: #fff3cd;
-            color: #856404;
+            background: #fefcbf;
+            color: #744210;
         }
         .back-link {
             display: inline-block;
             margin: 20px 0;
-            color: #8b7355;
+            color: #553c9a;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            padding: 8px 0;
         }
         .back-link:hover {
             text-decoration: underline;
         }
         .conclusions {
-            background: linear-gradient(135deg, #8b7355 0%, #a89070 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #b8c1ec 0%, #d4c1ec 100%);
+            color: #2d3748;
+            padding: 45px;
+            border-radius: 16px;
             margin-top: 50px;
+            box-shadow: 0 4px 20px rgba(184, 193, 236, 0.3);
         }
         .conclusions h3 {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.4rem;
         }
         .conclusions ul {
-            line-height: 1.8;
+            line-height: 1.9;
+        }
+        .conclusions li {
+            margin: 8px 0;
+        }
+        .conclusions strong {
+            color: #2d3748;
         }
         @media (max-width: 768px) {
             .project-hero h1 {
@@ -258,7 +305,7 @@
 <body>
     <nav>
         <div class="nav-content">
-            <a href="index.html" class="logo">YN</a>
+            <a href="index.html" class="logo">PS</a>
             <ul>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
@@ -309,28 +356,28 @@
                 </ul>
             </div>
 
-            <h3 style="margin-top: 40px; color: #8b7355;">Design Requirements Engineering</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-                <div style="background: linear-gradient(135deg, #c41e3a 0%, #dc143c 100%); color: white; padding: 25px; border-radius: 10px;">
-                    <h4 style="margin: 0 0 15px 0; font-size: 1.3rem; border-bottom: 2px solid rgba(255,255,255,0.3); padding-bottom: 10px;">Critical Requirements</h4>
-                    <ul style="margin: 0; padding-left: 18px; line-height: 1.8;">
+            <h3 style="margin-top: 40px; color: #553c9a; font-weight: 600;">Design Requirements Engineering</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 25px;">
+                <div style="background: linear-gradient(135deg, #fed7d7 0%, #fbb6ce 100%); color: #742a2a; padding: 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(251, 182, 206, 0.3);">
+                    <h4 style="margin: 0 0 18px 0; font-size: 1.2rem; border-bottom: 2px solid rgba(116, 42, 42, 0.2); padding-bottom: 12px; font-weight: 600;">Critical Requirements</h4>
+                    <ul style="margin: 0; padding-left: 18px; line-height: 1.9;">
                         <li>Equal performance across genders</li>
                         <li>Local data storage for 1 year</li>
                         <li>Automatic metric calculation</li>
                     </ul>
                 </div>
-                <div style="background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%); color: white; padding: 25px; border-radius: 10px;">
-                    <h4 style="margin: 0 0 15px 0; font-size: 1.3rem; border-bottom: 2px solid rgba(255,255,255,0.3); padding-bottom: 10px;">Essential Requirements</h4>
-                    <ul style="margin: 0; padding-left: 18px; line-height: 1.8;">
+                <div style="background: linear-gradient(135deg, #feebc8 0%, #fbd38d 100%); color: #744210; padding: 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(251, 211, 141, 0.3);">
+                    <h4 style="margin: 0 0 18px 0; font-size: 1.2rem; border-bottom: 2px solid rgba(116, 66, 16, 0.2); padding-bottom: 12px; font-weight: 600;">Essential Requirements</h4>
+                    <ul style="margin: 0; padding-left: 18px; line-height: 1.9;">
                         <li>Within +/-5% of clinical standards</li>
                         <li>Components &lt;0.25 kg body weight</li>
                         <li>1 year of daily use durability</li>
                         <li>FDA safety compliant</li>
                     </ul>
                 </div>
-                <div style="background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%); color: white; padding: 25px; border-radius: 10px;">
-                    <h4 style="margin: 0 0 15px 0; font-size: 1.3rem; border-bottom: 2px solid rgba(255,255,255,0.3); padding-bottom: 10px;">Desired Features</h4>
-                    <ul style="margin: 0; padding-left: 18px; line-height: 1.8;">
+                <div style="background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%); color: #22543d; padding: 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(154, 230, 180, 0.3);">
+                    <h4 style="margin: 0 0 18px 0; font-size: 1.2rem; border-bottom: 2px solid rgba(34, 84, 61, 0.2); padding-bottom: 12px; font-weight: 600;">Desired Features</h4>
+                    <ul style="margin: 0; padding-left: 18px; line-height: 1.9;">
                         <li>Total cost &lt;$100</li>
                         <li>&lt;5 min daily setup time</li>
                         <li>Qualitative user input interface</li>
@@ -359,7 +406,7 @@
                 </ul>
             </div>
 
-            <h3>Concepts Created:</h3>
+            <h3 style="color: #553c9a; font-weight: 600; margin-top: 30px;">Concepts Created</h3>
 
             <div class="image-grid">
                 <div class="image-card">
@@ -592,14 +639,14 @@
             </ul>
         </section>
 
-        <section style="margin-top: 50px;">
-            <h3>Future Development</h3>
-            <ul style="line-height: 1.8;">
-                <li>Bluetooth integration for wireless data transmission</li>
-                <li>Machine learning classifier for automated PD risk scoring</li>
-                <li>Mobile app integration for qualitative symptom tracking</li>
-                <li>Extended battery life for continuous monitoring</li>
-                <li>Clinical trials with actual PD patient population</li>
+        <section style="margin-top: 50px; background: #fefefe; padding: 35px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+            <h3 style="color: #553c9a; font-weight: 600; margin-bottom: 20px;">Future Development</h3>
+            <ul style="line-height: 1.9; color: #4a5568; padding-left: 20px;">
+                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Bluetooth integration</strong> for wireless data transmission</li>
+                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Machine learning classifier</strong> for automated PD risk scoring</li>
+                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Mobile app integration</strong> for qualitative symptom tracking</li>
+                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Extended battery life</strong> for continuous monitoring</li>
+                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Clinical trials</strong> with actual PD patient population</li>
             </ul>
         </section>
 
@@ -607,7 +654,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Priyal Sarda. All rights reserved.</p>
     </footer>
 </body>
 </html>

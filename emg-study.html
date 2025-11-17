@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrist Flexor Muscle Activation EMG Study | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #fbb6ce 0%, #fed7d7 100%);
+            padding: 120px 20px 80px;
+            text-align: center;
+            color: #2d3748;
+        }
+        .project-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .project-hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .project-hero .meta {
+            font-size: 1rem;
+            color: #553c9a;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        .tech-tags {
+            margin-top: 25px;
+        }
+        .tech-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.7);
+            color: #4a5568;
+            padding: 8px 16px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .project-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-card {
+            margin-bottom: 50px;
+            background: #fefefe;
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 5px solid #fbb6ce;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .section-card h2 {
+            font-size: 1.6rem;
+            color: #553c9a;
+            margin: 0 0 25px 0;
+            font-weight: 600;
+        }
+        .section-card h3 {
+            font-size: 1.25rem;
+            color: #553c9a;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        .section-card p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+        .section-card strong {
+            color: #2d3748;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #fef5f5 0%, #fff5f8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #fbb6ce;
+            margin: 20px 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        .highlight-box strong {
+            color: #c53030;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .info-card h4 {
+            color: #553c9a;
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .info-card ul {
+            margin: 0;
+            padding-left: 18px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .info-card li {
+            margin: 8px 0;
+        }
+        .figure-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 25px 0;
+        }
+        .figure-container img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 0 auto;
+            background: #f7f5f0;
+            padding: 15px;
+        }
+        .figure-caption {
+            padding: 18px;
+            font-size: 0.95rem;
+            color: #4a5568;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            background: #fafafa;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .result-card {
+            background: linear-gradient(135deg, #e9d8fd 0%, #fbb6ce 100%);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .result-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #553c9a;
+            margin-bottom: 8px;
+        }
+        .result-label {
+            color: #4a5568;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .contributions-box {
+            background: linear-gradient(135deg, #e9d8fd 0%, #d6bcfa 100%);
+            color: #44337a;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 4px 12px rgba(214, 188, 250, 0.3);
+        }
+        .contributions-box h4 {
+            margin: 0 0 20px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #44337a;
+        }
+        .contributions-box ul {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .contributions-box li {
+            margin: 10px 0;
+        }
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 50px;
+            margin: 20px 0;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(135deg, #b8c1ec 0%, #a8b8d8 100%);
+            color: #2d3748;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .conclusions {
+            background: linear-gradient(135deg, #b8c1ec 0%, #d4c1ec 100%);
+            color: #2d3748;
+            padding: 45px;
+            border-radius: 16px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(184, 193, 236, 0.3);
+        }
+        .conclusions h3 {
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+        .conclusions ul {
+            line-height: 1.9;
+            padding-left: 20px;
+        }
+        .conclusions li {
+            margin: 10px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #553c9a;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 0;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skills-tags span {
+            background: linear-gradient(135deg, #fbb6ce 0%, #f687b3 100%);
+            color: #702459;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            .section-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">PS</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>Wrist Flexor Muscle Activation EMG Study</h1>
+        <p class="subtitle">
+            Investigating the ergonomic impact of digital vs. traditional writing tools through surface electromyography analysis of wrist flexor muscle fatigue
+        </p>
+        <p class="meta">Fall 2024 | Georgia Tech</p>
+        <div class="tech-tags">
+            <span>EMG Circuit Design</span>
+            <span>Arduino</span>
+            <span>MATLAB</span>
+            <span>Signal Processing</span>
+            <span>Statistical Analysis</span>
+            <span>Biomechanics</span>
+        </div>
+    </section>
+
+    <div class="project-content">
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+
+        <!-- Overview Section -->
+        <section class="section-card">
+            <h2>Project Overview</h2>
+            <p>
+                With digital styluses like the Apple Pencil becoming increasingly prevalent in classrooms and workplaces, I wanted to understand their ergonomic impact compared to traditional writing tools. With a team of 4, I conducted a comprehensive study investigating whether writing medium affects wrist flexor muscle fatigue using surface electromyography (EMG).
+            </p>
+
+            <div class="highlight-box">
+                <strong>Research Question:</strong> Does writing with an Apple Pencil on iPad produce significantly different wrist flexor muscle activation compared to a mechanical pencil on paper?
+            </div>
+
+            <p>
+                <strong>Hypothesis:</strong> We hypothesized that the Apple Pencil would result in lower muscle activation due to the smooth glass surface requiring less grip force than paper friction.
+            </p>
+        </section>
+
+        <!-- Experimental Design -->
+        <section class="section-card">
+            <h2>Experimental Design & Methodology</h2>
+
+            <h3>Study Design</h3>
+            <p>
+                We implemented a within-subjects experimental design where each of the 52 participants served as their own control. This approach minimizes inter-individual variability and increases statistical power. I helped recruit right-handed Georgia Tech students aged 18-23 with no recent wrist or hand injuries.
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Sample Size Determination</h4>
+                    <ul>
+                        <li>Used G*Power software (version 3.1.9.6)</li>
+                        <li>Target statistical power: 95%</li>
+                        <li>Significance level: α = 0.05</li>
+                        <li>Required sample: <strong>52 participants</strong></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Testing Protocol</h4>
+                    <ul>
+                        <li>MVC Normalization: 3 trials, 5 sec each</li>
+                        <li>Randomization via coin flip</li>
+                        <li>100-word standardized passage</li>
+                        <li>1-minute rest between trials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Electrode Placement Protocol</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/emg-study/figure_3.png" alt="Muscle activation comparison chart">
+                </div>
+                <div class="info-card" style="margin: 0;">
+                    <h4>Electrode Configuration</h4>
+                    <ul>
+                        <li><strong>Positive electrode:</strong> Placed on the wrist over the flexor carpi ulnaris</li>
+                        <li><strong>Negative electrode:</strong> Positioned on the muscle belly of the wrist flexor</li>
+                        <li><strong>Ground electrode:</strong> Attached to the left hip bone for common reference</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EMG Data Acquisition -->
+        <section class="section-card">
+            <h2>EMG Data Acquisition System</h2>
+
+            <h3>Circuit Design & Hardware</h3>
+            <p>
+                We designed and implemented a custom EMG acquisition circuit using the BMED 3110 circuit board with carefully selected components for optimal signal conditioning.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 25px 0; align-items: start;">
+                <div>
+                    <div class="figure-container" style="margin: 0 0 20px 0;">
+                        <img src="images/emg-study/figure_4.png" alt="Writing speed analysis">
+                    </div>
+                    <h3 style="margin-top: 0;">Signal Conditioning Stages</h3>
+                    <ol class="step-list">
+                        <li>
+                            <strong>Instrumentation Amplifier (AD623N):</strong> First-stage amplification with adjustable gain G₁ = 1 + 100kΩ/R₃ to boost the weak EMG signal (typically 0.1-5 mV) while rejecting common-mode noise
+                        </li>
+                        <li>
+                            <strong>Bandpass Filtering:</strong> Low-pass filter (1 nF capacitor) removed high-frequency noise above 500 Hz, while high-pass filter (10 µF capacitor) eliminated motion artifacts and DC offset below 15 Hz, resulting in a <strong>15-500 Hz bandwidth</strong> optimal for EMG signals
+                        </li>
+                        <li>
+                            <strong>Secondary Amplification (Dual Op-Amp TLC2272A):</strong> Additional gain stage G₂ = R₅/R₄ provided final amplification for optimal Arduino input range (overall gain = 3.3 kΩ)
+                        </li>
+                    </ol>
+                </div>
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/emg-study/chip.jpg" alt="EMG circuit chip">
+                </div>
+            </div>
+
+            <h3>Data Acquisition with Arduino & MATLAB</h3>
+            <p>
+                I used an Arduino Uno R3 microcontroller to digitize the conditioned analog EMG signals. For real-time data collection and visualization, I utilized the MATLAB Multiport Data Collection app (version R2024a), which allowed me to:
+            </p>
+            <ul style="color: #4a5568; line-height: 1.8; padding-left: 20px;">
+                <li>Monitor live EMG signals in real-time to verify signal quality</li>
+                <li>Record continuous EMG data streams throughout each writing task</li>
+                <li>Export raw data for post-processing and analysis</li>
+                <li>Troubleshoot electrode placement issues by observing signal characteristics</li>
+            </ul>
+        </section>
+
+        <!-- Data Processing -->
+        <section class="section-card">
+            <h2>My Role: Data Processing & Statistical Analysis</h2>
+            <p>
+                After collecting EMG data from all 52 participants, I took primary responsibility for processing and analyzing the complete dataset. This involved several systematic steps to transform raw voltage signals into meaningful physiological measurements.
+            </p>
+
+            <ol class="step-list">
+                <li>
+                    <strong>Data Organization:</strong> Exported all raw EMG data from MATLAB into Microsoft Excel, organizing into a structured spreadsheet with separate columns for each participant, trial type (MVC, Apple Pencil, or Mechanical Pencil), and time-stamped voltage readings
+                </li>
+                <li>
+                    <strong>Signal Processing - RMS Calculation:</strong> For each writing trial, I calculated the root mean square (RMS) of the EMG signal, which provides a measure of signal magnitude that correlates with muscle activation level
+                </li>
+                <li>
+                    <strong>MVC Normalization:</strong> To enable valid comparison across participants, I normalized each Flexor RMS value by dividing it by that participant's average maximum voluntary contraction: <strong>% Activation = (Flexor RMS / Average MVC) × 100%</strong>
+                </li>
+                <li>
+                    <strong>Statistical Testing:</strong> Conducted paired two-sample t-tests (α = 0.05) to compare muscle activation between conditions, using both one-tailed and two-tailed tests for comprehensive analysis
+                </li>
+            </ol>
+        </section>
+
+        <!-- Results -->
+        <section class="section-card">
+            <h2>Results & Key Findings</h2>
+
+            <h3>Primary Finding: Muscle Activation Analysis</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/emg-study/figure_2.png" alt="EMG circuit schematic">
+                    <div class="figure-caption">Wrist flexor activation comparison between Apple Pencil and mechanical pencil</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div class="result-card" style="padding: 15px;">
+                        <div class="result-value" style="font-size: 1.4rem;">99.3%</div>
+                        <div class="result-label" style="font-size: 0.8rem;">Apple Pencil Activation</div>
+                    </div>
+                    <div class="result-card" style="padding: 15px;">
+                        <div class="result-value" style="font-size: 1.4rem;">99.6%</div>
+                        <div class="result-label" style="font-size: 0.8rem;">Mechanical Pencil Activation</div>
+                    </div>
+                    <div class="result-card" style="padding: 15px;">
+                        <div class="result-value" style="font-size: 1.4rem;">p = 0.043</div>
+                        <div class="result-label" style="font-size: 0.8rem;">Statistical Significance</div>
+                    </div>
+                    <div class="result-card" style="padding: 15px;">
+                        <div class="result-value" style="font-size: 1.4rem;">r = 0.907</div>
+                        <div class="result-label" style="font-size: 0.8rem;">Pearson Correlation</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                <strong>Interpretation:</strong> The mechanical pencil consistently produced marginally higher muscle activation across participants, supporting our hypothesis that the Apple Pencil offers ergonomic benefits. While the absolute difference was small (0.3 percentage points), the directional consistency suggests that writing on paper requires more muscular effort, likely due to increased friction and grip force requirements.
+            </p>
+
+            <h3>Secondary Analysis: Writing Speed Comparison</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/emg-study/figure_1.png" alt="EMG electrode placement on wrist">
+                    <div class="figure-caption">Writing time analysis showing mechanical pencil performance advantage.</div>
+                </div>
+                <div>
+                    <div class="info-card" style="margin: 0 0 15px 0;">
+                        <h4>Mechanical Pencil</h4>
+                        <ul>
+                            <li>Mean time: <strong>188.10 seconds</strong></li>
+                            <li>Speed: 1.325 words/second</li>
+                            <li><strong>9.1% faster</strong> than Apple Pencil</li>
+                        </ul>
+                    </div>
+                    <div class="info-card" style="margin: 0;">
+                        <h4>Apple Pencil</h4>
+                        <ul>
+                            <li>Mean time: <strong>195.96 seconds</strong></li>
+                            <li>Speed: 1.204 words/second</li>
+                            <li>Statistical significance: <strong>p = 0.0006</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusions -->
+        <section class="conclusions">
+            <h3>Key Takeaway</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
+                Our research revealed an <strong>ergonomic-performance trade-off</strong>: mechanical pencils enable faster writing but require slightly more muscular effort, while Apple Pencils reduce muscle strain but slow writing speed.
+            </p>
+
+            <h3>Practical Applications</h3>
+            <ul>
+                <li><strong>Educational Technology:</strong> Schools implementing iPad programs should consider the speed-comfort trade-off. For timed assessments, traditional tools may be preferable; for extended note-taking, digital tools may reduce fatigue.</li>
+                <li><strong>Occupational Health:</strong> Individuals with repetitive strain injuries or carpal tunnel syndrome may benefit from digital stylus use during extended writing sessions.</li>
+                <li><strong>Product Design:</strong> Digital stylus manufacturers could focus on improving tactile feedback to enhance writing speed while maintaining ergonomic advantages.</li>
+            </ul>
+        </section>
+
+        <!-- My Contributions -->
+        <section class="section-card" style="margin-top: 50px;">
+            <h2>My Contributions</h2>
+            <div class="info-grid">
+                <div class="contributions-box">
+                    <h4>Data Collection</h4>
+                    <ul>
+                        <li>Conducted EMG measurements for 20 participants</li>
+                        <li>Ensured proper electrode placement on flexor carpi ulnaris</li>
+                        <li>Verified signal quality using MATLAB real-time monitoring</li>
+                        <li>Maintained standardized experimental protocols</li>
+                    </ul>
+                </div>
+                <div class="contributions-box">
+                    <h4>Signal Processing & Analysis (100% Responsibility)</h4>
+                    <ul>
+                        <li>Processed raw EMG data from all 52 participants in Excel</li>
+                        <li>Calculated RMS values for each writing trial</li>
+                        <li>Implemented MVC normalization across entire dataset</li>
+                        <li>Created automated formulas for efficient batch processing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Technical Skills Demonstrated</h3>
+            <div class="skills-tags">
+                <span>Surface Electromyography</span>
+                <span>EMG Circuit Design</span>
+                <span>Arduino Data Acquisition</span>
+                <span>MATLAB Signal Processing</span>
+                <span>Digital Signal Filtering</span>
+                <span>RMS Calculation</span>
+                <span>MVC Normalization</span>
+                <span>Excel Analysis</span>
+                <span>Paired t-test</span>
+                <span>G*Power</span>
+                <span>Data Visualization</span>
+            </div>
+        </section>
+
+        <!-- What I Learned -->
+        <section class="section-card" style="margin-top: 50px;">
+            <h2>What I Learned</h2>
+            <p>This project significantly enhanced my capabilities as a biomedical engineer:</p>
+            <ul style="color: #4a5568; line-height: 1.9; padding-left: 20px;">
+                <li><strong>Technical Skills:</strong> Gained hands-on experience with EMG circuit design, Arduino programming, MATLAB data acquisition, and Excel-based signal processing</li>
+                <li><strong>Statistical Analysis:</strong> Developed proficiency in hypothesis testing, paired t-tests, power analysis, and data normalization techniques</li>
+                <li><strong>Research Design:</strong> Understood the importance of within-subjects designs, randomization, and proper experimental controls</li>
+                <li><strong>Critical Thinking:</strong> Learned to identify methodological limitations and propose improvements for future studies</li>
+            </ul>
+        </section>
+
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Priyal Sarda. All rights reserved.</p>
+    </footer>
+</body>
+</html>
