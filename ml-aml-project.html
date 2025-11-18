@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AML Classification Project | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #b39ddb 0%, #d1c4e9 100%);
+            padding: 120px 20px 80px;
+            text-align: center;
+            color: #2d3748;
+        }
+        .project-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .project-hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .project-hero .meta {
+            font-size: 1rem;
+            color: #4a148c;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        .tech-tags {
+            margin-top: 25px;
+        }
+        .tech-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.7);
+            color: #4a5568;
+            padding: 8px 16px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .project-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .project-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            font-weight: 700;
+        }
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        .project-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        .project-content ul {
+            margin-bottom: 2rem;
+            padding-left: 0;
+            list-style: none;
+        }
+        .project-content ul li {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .project-content ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #666;
+            font-weight: bold;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .back-button:hover {
+            color: #2d3748;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">PS</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#cad">CAD</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="project-hero">
+        <h1>AML Classification Project</h1>
+        <p class="subtitle">Machine learning model for classifying Acute Myeloid Leukemia from flow cytometry data</p>
+        <p class="meta">Machine Learning • Medical Diagnostics • Python</p>
+        <div class="tech-tags">
+            <span>Python</span>
+            <span>scikit-learn</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Random Forest</span>
+            <span>Flow Cytometry</span>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <a href="index.html#projects" class="back-button">← Back to Projects</a>
+
+        <h2>Project Overview</h2>
+        <p>
+            Developed a machine learning model to classify Acute Myeloid Leukemia (AML) from flow cytometry data using Random Forest algorithms. This project demonstrated the application of supervised learning techniques to medical diagnostic data.
+        </p>
+        <p>
+            The goal of this project was to build a binary classifier that could accurately distinguish between normal and AML samples based on flow cytometry measurements from 8 different tubes with various cell surface markers (CD45, CD34, CD38, etc.). The dataset contained multiple fluorescence intensity measurements across different channels for each sample.
+        </p>
+
+        <h3>Technical Implementation</h3>
+
+        <p>
+            <strong>Data Processing:</strong> Implemented comprehensive feature engineering by extracting statistical features (mean, standard deviation, median, and quartiles) from each flow cytometry tube. Additionally calculated domain-specific ratios such as kappa/lambda light chain ratios and CD34/CD38 ratios, which are clinically relevant markers for hematological disorders.
+        </p>
+
+        <p>
+            <strong>Model Development:</strong> Utilized scikit-learn to build a Random Forest Classifier with optimized hyperparameters (1000 estimators, max depth of 5, and sqrt max features). Applied StandardScaler for feature normalization to ensure all measurements were on comparable scales. Implemented stratified train-test splitting to maintain class distribution given the imbalanced nature of the dataset (normal samples significantly outnumbered AML cases).
+        </p>
+
+        <p>
+            <strong>Model Evaluation:</strong> Achieved strong classification performance with training accuracy of approximately 0.95 and testing accuracy demonstrating good generalization. The model successfully handled the class imbalance challenge inherent in medical diagnostic datasets where disease cases are typically rare compared to normal samples.
+        </p>
+
+        <h3>Key Skills Demonstrated</h3>
+        <ul>
+            <li><strong>Machine Learning Fundamentals:</strong> Supervised learning, binary classification, ensemble methods (Random Forest), model evaluation and validation</li>
+            <li><strong>Data Processing:</strong> Feature extraction, feature engineering, data normalization, handling missing data and incomplete samples</li>
+            <li><strong>Python Programming:</strong> Pandas for data manipulation, NumPy for numerical computations, scikit-learn for machine learning implementation</li>
+            <li><strong>Domain Knowledge:</strong> Understanding of flow cytometry data, hematological markers, and their clinical significance in leukemia diagnosis</li>
+            <li><strong>Model Optimization:</strong> Hyperparameter tuning, addressing class imbalance, preventing overfitting through proper validation strategies</li>
+        </ul>
+
+        <h3>Results and Impact</h3>
+        <p>
+            The final model successfully classified 180 samples with appropriate distribution predictions (161 normal, 19 AML), demonstrating robust performance on unseen data. This project showcased the practical application of machine learning in medical diagnostics, where accuracy and reliability are critical. The implementation emphasized best practices including proper data splitting, feature scaling, and validation techniques essential for deploying machine learning models in healthcare settings.
+        </p>
+
+        <a href="index.html#projects" class="back-button">← Back to Projects</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Priyal Sarda. All rights reserved.</p>
+    </footer>
+</body>
+</html>
