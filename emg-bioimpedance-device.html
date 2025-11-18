@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearable EMG & Bioimpedance System | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-hero {
+            background: linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%);
+            padding: 120px 20px 80px;
+            text-align: center;
+            color: #2d3748;
+        }
+        .project-hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .project-hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .project-hero .meta {
+            font-size: 1rem;
+            color: #00695c;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        .tech-tags {
+            margin-top: 25px;
+        }
+        .tech-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.7);
+            color: #4a5568;
+            padding: 8px 16px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .project-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-card {
+            margin-bottom: 50px;
+            background: #fefefe;
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 5px solid #4db6ac;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .section-card h2 {
+            font-size: 1.6rem;
+            color: #00695c;
+            margin: 0 0 25px 0;
+            font-weight: 600;
+        }
+        .section-card h3 {
+            font-size: 1.25rem;
+            color: #00695c;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        .section-card p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+        .section-card strong {
+            color: #2d3748;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #4db6ac;
+            margin: 20px 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        .highlight-box strong {
+            color: #00695c;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .info-card h4 {
+            color: #00695c;
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .info-card ul {
+            margin: 0;
+            padding-left: 18px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .info-card li {
+            margin: 8px 0;
+        }
+        .figure-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 25px 0;
+        }
+        .figure-container img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 0 auto;
+            background: #f7f5f0;
+            padding: 15px;
+        }
+        .figure-caption {
+            padding: 18px;
+            font-size: 0.95rem;
+            color: #4a5568;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            background: #fafafa;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #004d40;
+            margin-bottom: 8px;
+        }
+        .metric-label {
+            color: #f5f5f5;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .contributions-box {
+            background: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
+            color: #004d40;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 4px 12px rgba(77, 182, 172, 0.3);
+        }
+        .contributions-box h4 {
+            margin: 0 0 20px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #004d40;
+        }
+        .contributions-box ul {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .contributions-box li {
+            margin: 10px 0;
+        }
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 50px;
+            margin: 20px 0;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .conclusions {
+            background: linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%);
+            color: #2d3748;
+            padding: 45px;
+            border-radius: 16px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(77, 182, 172, 0.3);
+        }
+        .conclusions h3 {
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: #004d40;
+        }
+        .conclusions ul {
+            line-height: 1.9;
+            padding-left: 20px;
+        }
+        .conclusions li {
+            margin: 10px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #00695c;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 0;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skills-tags span {
+            background: linear-gradient(135deg, #b2dfdb 0%, #80cbc4 100%);
+            color: #004d40;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            .section-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">PS</a>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>Wearable EMG & Bioimpedance System</h1>
+        <p class="subtitle">
+            Detecting Early Signs of Typing-Related Musculoskeletal Disorders through Real-Time Posture and Fatigue Monitoring
+        </p>
+        <p class="meta">Fall 2024 | Georgia Tech</p>
+        <div class="tech-tags">
+            <span>EMG Circuit Design</span>
+            <span>Bioimpedance Analysis</span>
+            <span>Arduino</span>
+            <span>MATLAB</span>
+            <span>Signal Processing</span>
+            <span>3D Printing</span>
+            <span>Wearable Devices</span>
+        </div>
+    </section>
+
+    <div class="project-content">
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+
+        <!-- Overview Section -->
+        <section class="section-card">
+            <h2>Project Overview</h2>
+            <p>
+                As someone who spends countless hours coding, I've personally experienced wrist fatigue and understood the real risks of developing carpal tunnel syndrome or tendonitis. That's why I worked with a team of 4 to create a wearable device that detects the early warning signs of musculoskeletal disorders (MSDs) before they become serious.
+            </p>
+            <p>
+                We combined two complementary technologies: EMG to monitor wrist posture in real-time, and bioimpedance analysis to detect muscle fatigue. I led the EMG subsystem development while also contributing to the bioimpedance circuit. The device provides immediate LCD feedback, alerting users when poor typing posture is detected and tracking fatigue levels throughout the workday.
+            </p>
+
+            <div class="highlight-box">
+                <strong>Our Innovation:</strong> A preventative wearable device that detects both incorrect posture and early-stage muscle fatigue, providing real-time intervention before MSDs develop.
+            </div>
+        </section>
+
+        <!-- The Problem -->
+        <section class="section-card">
+            <h2>The Problem</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Clinical Need</h4>
+                    <ul>
+                        <li>75% of office workers experience musculoskeletal disorders</li>
+                        <li>Keyboard use exceeding 20 hours/week significantly increases carpal tunnel syndrome risk</li>
+                        <li>Non-neutral wrist positioning is the largest contributing factor to MSDs</li>
+                        <li>Most interventions happen after symptoms appear, when damage has already occurred</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Our Approach</h4>
+                    <ul>
+                        <li>Real-time EMG monitoring of wrist posture during typing</li>
+                        <li>Bioimpedance analysis to detect early muscle fatigue</li>
+                        <li>Immediate visual feedback for posture correction</li>
+                        <li>Preventative intervention before tissue damage occurs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Design -->
+        <section class="section-card">
+            <h2>System Design & How We Built It</h2>
+            <p>
+                The device operates in three stages: (1) records baseline bioimpedance values before typing, (2) continuously monitors wrist posture via EMG during typing and displays LCD alerts for poor positioning, (3) compares post-session bioimpedance against baseline to assess muscle fatigue.
+            </p>
+
+            <h3>Circuit Architecture</h3>
+            <p>
+                The system uses two complementary circuits powered by a battery-operated Arduino: the EMG and bioimpedance subsystems. Real-time feedback displays on an LCD screen showing typing posture and tissue health insights.
+            </p>
+
+            <h3>EMG Circuit Components</h3>
+            <p>
+                I designed the EMG circuit to monitor the flexor carpi ulnaris muscle - its overactivation indicates poor wrist posture during typing. The circuit amplifies small muscle signals (0.1-5 mV) to Arduino's input range (0-5V) while filtering out noise.
+            </p>
+
+            <div class="figure-container">
+                <img src="images/bioimpedance-project/emg-circuit.png" alt="EMG circuit architecture diagram">
+                <div class="figure-caption">EMG circuit architecture with AD8220 instrumentation amplifier, high-pass and low-pass filters, and operational amplifiers for signal conditioning</div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Stage 1: Instrumentation Amplifier</h4>
+                    <ul>
+                        <li>Component: AD8220 or AD623N</li>
+                        <li>Selected for excellent common-mode rejection ratio (CMRR)</li>
+                        <li>Critical for removing power line noise</li>
+                        <li>Differential input amplifies voltage difference between muscle electrodes</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Stage 2-3: Filtering</h4>
+                    <ul>
+                        <li>High-Pass Filter (5 Hz cutoff): Removes DC offset and motion artifacts</li>
+                        <li>Low-Pass Filter (500 Hz cutoff): Eliminates high-frequency electrical noise</li>
+                        <li>Preserves EMG signal band (10-500 Hz)</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Stage 4: Additional Amplification</h4>
+                    <ul>
+                        <li>Operational amplifiers provide additional gain stages</li>
+                        <li>Matches Arduino's 0-5V analog input range</li>
+                        <li>Enables accurate digitization of muscle signals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Bioimpedance Circuit Components</h3>
+            <p>
+                I also helped develop the bioimpedance subsystem to evaluate muscle fatigue by measuring tissue impedance. We used a four-wire technique to minimize skin impedance influence. The AD5940 chip generates an AC signal applied to the forearm while measuring current and voltage to calculate tissue impedance.
+            </p>
+
+            <div class="figure-container">
+                <img src="images/bioimpedance-project/bioimpedance-circuit.png" alt="Bioimpedance circuit diagram">
+                <div class="figure-caption">Bioimpedance circuit using AD5940 chip with four-electrode configuration for accurate tissue impedance measurement</div>
+            </div>
+
+            <div class="info-card">
+                <h4>Dual-Frequency Measurement</h4>
+                <p>We designed the system to monitor bioimpedance at two frequencies:</p>
+                <ul>
+                    <li><strong>5 kHz:</strong> Primarily assesses extracellular pathways</li>
+                    <li><strong>100 kHz:</strong> Provides insights into intracellular pathways</li>
+                    <li><strong>h-value ratio:</strong> h = ΔR₁₀₀ₖₕz / ΔR₅ₖₕz (baseline: 1.0 for no fatigue)</li>
+                    <li>Changes in ratio reflect fluid accumulation in muscle tissue, a key indicator of fatigue</li>
+                </ul>
+            </div>
+
+            <h3>Electrode Placement</h3>
+            <p>
+                For the EMG circuit, I placed positive and negative electrodes on the flexor carpi ulnaris muscle belly with the reference electrode on the elbow for stable grounding. For bioimpedance, we positioned current-injecting electrodes at forearm ends and voltage-sensing electrodes centrally to minimize skin impedance impact.
+            </p>
+        </section>
+
+        <!-- My Contributions -->
+        <section class="section-card" style="margin-top: 50px;">
+            <h2>My Contributions</h2>
+            <p>
+                I led EMG subsystem development while contributing to the bioimpedance system. My work involved three phases: building the EMG circuit, analyzing data in MATLAB to determine post-processing requirements, and implementing real-time algorithms on Arduino.
+            </p>
+
+            <h3>Phase 1: EMG Circuit Design and Construction</h3>
+            <p>
+                I built the EMG circuit with a four-stage architecture that amplifies muscle signals (0.1-5 mV) to Arduino's range (0-5V) while filtering noise. I tested multiple electrode placements to find the optimal position on the flexor carpi ulnaris for clearest signal differentiation between good and bad posture.
+            </p>
+
+            <h3>Phase 2: Data Collection and MATLAB Signal Analysis</h3>
+            <p>
+                I collected raw EMG data and imported it into MATLAB to understand signal behavior and determine required post-processing steps. I prototyped all algorithms in MATLAB before Arduino implementation.
+            </p>
+
+            <div class="figure-container">
+                <img src="images/bioimpedance-project/emg-model-analysis.png" alt="MATLAB signal processing pipeline">
+                <div class="figure-caption">MATLAB signal processing pipeline showing raw EMG data, rectification, smoothing, RMS calculation, and peak detection for posture classification</div>
+            </div>
+
+            <div class="contributions-box">
+                <h4>What I Did in MATLAB:</h4>
+                <ul>
+                    <li><strong>Raw Signal Analysis:</strong> Loaded raw EMG voltage data and visualized it to understand signal characteristics, noise patterns, and baseline drift</li>
+                    <li><strong>Signal Preprocessing Pipeline:</strong> Implemented mean subtraction (DC offset removal), absolute value transformation (full-wave rectification), and signal smoothing using moving average filters</li>
+                    <li><strong>Feature Extraction:</strong> Calculated Root Mean Square (RMS) amplitude as a measure of overall muscle activation level</li>
+                    <li><strong>Peak Detection Algorithm:</strong> Developed peak counting methods to characterize activation patterns - increased wave frequency correlates with sustained improper wrist positioning</li>
+                    <li><strong>Dual-Threshold Classification:</strong> Created two complementary thresholds: (1) RMS amplitude threshold for sudden spikes, (2) Peak frequency threshold >50 peaks for sustained poor posture</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Key Insight:</strong> I discovered that a single threshold approach was insufficient. Sudden spikes could indicate quick movements, while sustained activation at moderate levels better indicated typing with extended/flexed wrist. The dual-threshold combining amplitude and frequency proved essential.
+            </div>
+
+            <h3>Phase 3: Arduino Implementation for Real-Time Wearable Operation</h3>
+            <p>
+                I translated MATLAB algorithms into optimized C++ code for Arduino, enabling real-time signal processing on battery power. This made the device truly wearable - continuously collecting EMG data, processing it, classifying posture, and displaying results without computer connection.
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Technical Challenges & Solutions</h4>
+                    <ul>
+                        <li><strong>Memory Constraints:</strong> Signal buffer consumed >85% of available SRAM. I optimized data structures, used appropriate variable types, and implemented circular buffers to minimize memory footprint</li>
+                        <li><strong>Real-Time Processing:</strong> Implemented efficient moving average filters and running RMS calculations that updated with each new sample rather than recomputing entire buffers</li>
+                        <li><strong>ADC Sampling:</strong> Configured analog-to-digital converter to sample >1000 Hz for EMG signals while balancing processing constraints</li>
+                        <li><strong>LCD Display Integration:</strong> Programmed LCD to continuously display 'Good' or 'Bad' based on real-time classification using I2C protocol to minimize pin usage</li>
+                        <li><strong>Threshold Calibration:</strong> Implemented adaptive threshold system accounting for individual differences in muscle activation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>The Result:</strong> A working real-time EMG monitoring system running on battery power that accurately detects poor typing posture and provides immediate visual feedback without needing a computer connection. The system successfully differentiates between good posture (neutral wrist) and bad postures including reaching for keys, typing at angles, wrist rotation, and wrist resting. The Arduino-based implementation made the device truly wearable and practical for everyday use.
+            </div>
+        </section>
+
+        <!-- Bioimpedance System -->
+        <section class="section-card">
+            <h2>Bioimpedance System: Fatigue Detection</h2>
+            <p>
+                While I focused primarily on the EMG subsystem, I also collaborated with my team on developing the bioimpedance subsystem for muscle fatigue detection. We wanted this system to provide a complementary measurement that detects microscopic changes in tissue composition before they manifest as macroscopic symptoms.
+            </p>
+
+            <h3>Technology and Measurement Principle</h3>
+            <p>
+                We learned that bioimpedance provides a non-invasive means of monitoring tissue composition changes in electrical resistance due to extracellular and intracellular fluids. AC current travels differently through these two fluid spaces: low-frequency currents pass through extracellular fluid, while higher-frequency currents can penetrate through the cell. At a cellular level, the cell membrane acts as a capacitor which creates a barrier that prevents low frequency current from passing through. As frequency increases, the capacitive reactance of the membrane decreases, and signals can thereby pass through.
+            </p>
+            <p>
+                When muscles become fatigued, metabolic byproducts accumulate in extracellular fluid, decreasing electrical resistance. That's why we chose bioimpedance - it detects these microscopic changes in the extracellular region due to fatigue before they manifest as macroscopic symptoms, offering a non-invasive method to track muscle stress which potentially causes overuse injuries over time.
+            </p>
+
+            <div class="info-card">
+                <h4>Clinical Significance</h4>
+                <ul>
+                    <li><strong>Function:</strong> Muscle fatigue detection through tissue impedance changes</li>
+                    <li><strong>Output:</strong> Real-time impedance values at 5 kHz displayed on LCD</li>
+                    <li><strong>Impact:</strong> Detects muscle inflammation and edema before they manifest as pain</li>
+                    <li><strong>Four-electrode setup:</strong> Accounts for skin impedance, providing more accurate tissue measurements</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Physical Housing -->
+        <section class="section-card">
+            <h2>Physical Housing Design</h2>
+            <p>
+                We designed a simplistic 3D printed enclosure to house all the electrical components. We decided the device should be worn on the upper arm, so we created an interface between the enclosure and the arm that features a curved surface to increase the comfort and fit of the packaging.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 30px 0;">
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <img src="images/bioimpedance-project/housing1.png" alt="3D CAD model of device enclosure - top view" style="width: 100%; height: 400px; object-fit: contain; background: #f7f5f0; padding: 15px; display: block;">
+                </div>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <img src="images/bioimpedance-project/housing2.png" alt="3D CAD model of device enclosure - side view" style="width: 100%; height: 400px; object-fit: contain; background: #f7f5f0; padding: 15px; display: block;">
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4>The enclosure houses:</h4>
+                <ul>
+                    <li>Arduino microcontroller and battery power supply</li>
+                    <li>EMG conditioning circuitry (AD8220 instrumentation amplifier, filters)</li>
+                    <li>Bioimpedance circuitry (AD5940 chip, ADICUP3029 baseboard)</li>
+                    <li>LCD display for real-time feedback</li>
+                    <li>Wired electrodes connecting to forearm muscles</li>
+                </ul>
+            </div>
+
+            <p>
+                We added larger holes on either side of the enclosure to facilitate more efficient wiring configurations and allow the electrodes to be connected into the components within the box and also to the flexor carpi ulnaris. I made more cutouts to decrease the 3D printing time and cost of production without compromising structural integrity and aesthetics. We held all of these components together with a sleeve.
+            </p>
+        </section>
+
+        <!-- Testing & Validation -->
+        <section class="section-card">
+            <h2>Testing & Validation Results</h2>
+
+            <h3>EMG Posture Detection Testing</h3>
+            <p>
+                I conducted extensive testing of my EMG system using various controlled posture conditions. I wanted to ensure the system could reliably detect different types of poor posture, so I tested it across multiple users and typing scenarios.
+            </p>
+
+            <div class="figure-container">
+                <iframe src="https://drive.google.com/file/d/14SE-U_NXd-svBRckDenrfyhpYQeMgRml/preview" style="width: 100%; max-width: 700px; height: 400px; display: block; margin: 0 auto; border: none; border-radius: 8px;" allow="autoplay"></iframe>
+                <div class="figure-caption">Real-time demonstration of EMG system detecting good vs. bad posture and displaying feedback on LCD</div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Good Posture Conditions (Correctly Classified)</h4>
+                    <ul>
+                        <li>Neutral wrist position (0° extension/flexion)</li>
+                        <li>Hands floating above keyboard with minimal wrist activation</li>
+                        <li>Proper ergonomic typing form</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Bad Posture Conditions (Correctly Detected)</h4>
+                    <ul>
+                        <li>Reaching over for keys (excessive extension)</li>
+                        <li>Typing at an angle (radial/ulnar deviation)</li>
+                        <li>Sustained wrist rotation</li>
+                        <li>Resting wrists on keyboard pad while typing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>
+                The dual-threshold approach I developed proved highly effective - my system achieved reliable detection across different users and typing styles. I programmed the microcontroller to process the EMG signal data in real time and display 'Good' or 'Bad' on the LCD screen to alert users of their posture.
+            </p>
+
+            <h3>Bioimpedance Fatigue Detection Testing</h3>
+            <p>
+                We tested our device by placing the electrodes on our forearm tissue and continuously gathering data at each chosen frequency, 5 kHz and 100 kHz, over the span of several minutes. We wanted to validate that the bioimpedance measurements could actually detect fatigue.
+            </p>
+
+            <div class="info-card">
+                <h4>Experimental Protocol</h4>
+                <ul>
+                    <li><strong>Minute 1:</strong> Baseline measurement (forearm at rest, non-fatigued)</li>
+                    <li><strong>Minutes 2-3:</strong> Intentional fatigue through repetitive typing motions</li>
+                    <li><strong>Minute 4:</strong> Post-fatigue measurement (at rest to minimize motion artifacts)</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 30px 0;">
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/bioimpedance-project/5kHz.png" alt="Bioimpedance resistance over time at 5 kHz">
+                    <div class="figure-caption">Bioimpedance resistance at 5 kHz showing decrease during fatigue (extracellular pathway measurement)</div>
+                </div>
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/bioimpedance-project/100kHz.png" alt="Bioimpedance resistance over time at 100 kHz">
+                    <div class="figure-caption">Bioimpedance resistance at 100 kHz showing decrease during fatigue (intracellular pathway measurement)</div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">10-15 Ω</div>
+                    <div class="metric-label">5 kHz Decrease When Fatigued</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">~5 Ω</div>
+                    <div class="metric-label">100 kHz Decrease</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.69-0.72</div>
+                    <div class="metric-label">Fatigued h-value Ratios</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.97</div>
+                    <div class="metric-label">Non-Fatigued h-value Ratio</div>
+                </div>
+            </div>
+
+            <p>
+                As shown in the graphs above, the data we collected aligned with our expected values and proved that our system would be able to accurately measure fatigue in the forearm when fatiguing wrist rotation muscles used in typing. We observed clear decreases in impedance at the end of each trial when muscle was fatigued - approximately 10-15 Ω at 5 kHz and ~5 Ω at 100 kHz. The larger decrease at the lower frequency reflects greater extracellular fluid accumulation, which validated our design approach and confirmed the bioimpedance system's ability to detect early muscle fatigue.
+            </p>
+        </section>
+
+        <!-- Conclusions -->
+        <section class="conclusions">
+            <h3>Key Outcomes</h3>
+            <ul>
+                <li>Created a dual-mode wearable device detecting early MSD warning signs through EMG posture monitoring and bioimpedance fatigue analysis</li>
+                <li>Successfully validated EMG system across multiple users and posture types with real-time LCD feedback</li>
+                <li>Demonstrated bioimpedance sensitivity to muscle fatigue (10-15 Ω decrease at 5 kHz, ~5 Ω at 100 kHz)</li>
+                <li>Achieved real-time Arduino implementation of signal processing algorithms optimized for embedded constraints</li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Future Improvements</h3>
+            <ul>
+                <li>Autonomous h-value ratio calculation using concurrent dual-frequency measurements</li>
+                <li>Larger population validation for fatigue thresholds</li>
+                <li>Accelerometer integration for motion artifact filtering</li>
+                <li>Higher-capacity microcontroller (ESP32, STM32) for increased resolution</li>
+                <li>Analog rectification and filtering stages for improved signal quality</li>
+            </ul>
+        </section>
+
+        <!-- What I Learned -->
+        <section class="section-card" style="margin-top: 50px;">
+            <h2>What I Learned</h2>
+            <ul style="color: #4a5568; line-height: 1.8; padding-left: 20px;">
+                <li><strong>Signal Processing:</strong> Translated theoretical concepts (filtering, RMS, peak detection) into practical MATLAB and Arduino implementations</li>
+                <li><strong>Embedded Systems:</strong> Optimized code for Arduino's limited SRAM using circular buffers and efficient algorithms for real-time processing</li>
+                <li><strong>Algorithm Development:</strong> Prototyping in MATLAB before Arduino implementation saved significant debugging time</li>
+                <li><strong>Multi-Modal Sensing:</strong> Combining EMG and bioimpedance provided comprehensive diagnostics beyond either system alone</li>
+                <li><strong>Circuit Design:</strong> Gained hands-on experience with instrumentation amplifiers, differential amplification, and filtering biopotential signals</li>
+                <li><strong>Wearable Design:</strong> Balanced power consumption, form factor, and user interface for practical everyday use</li>
+            </ul>
+
+            <h3>Technical Skills Demonstrated</h3>
+            <div class="skills-tags">
+                <span>EMG Circuit Design</span>
+                <span>Bioimpedance Analysis</span>
+                <span>Arduino Programming (C++)</span>
+                <span>MATLAB Signal Processing</span>
+                <span>Real-Time Embedded Systems</span>
+                <span>Digital Filtering</span>
+                <span>RMS Calculation</span>
+                <span>Peak Detection Algorithms</span>
+                <span>Instrumentation Amplifiers</span>
+                <span>LCD Display Integration (I2C)</span>
+                <span>Memory Optimization</span>
+                <span>3D Printing & CAD</span>
+                <span>Wearable Device Design</span>
+                <span>Biomedical Sensors</span>
+            </div>
+        </section>
+
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Priyal Sarda. All rights reserved.</p>
+    </footer>
+</body>
+</html>

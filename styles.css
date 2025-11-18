@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333;
     background: #fff;
@@ -73,11 +73,29 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 2rem;
 }
 
-.hero-content h1 {
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+}
+
+.headshot {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -98,6 +116,13 @@ nav a:hover {
     margin: 0 auto;
 }
 
+.intro-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-top: 1.5rem;
+}
+
 /* Sections */
 section {
     padding: 6rem 0;
@@ -115,11 +140,35 @@ section h2 {
     background: #fafafa;
 }
 
+.about .container {
+    max-width: 900px;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.about h3:first-of-type {
+    margin-top: 0;
+}
+
 .about p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #555;
     margin-bottom: 1.5rem;
-    max-width: 700px;
+    line-height: 1.8;
+    text-align: justify;
 }
 
 /* Projects Section */
@@ -215,12 +264,41 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .headshot {
+        width: 250px;
+    }
+
+    .hero-text h1 {
         font-size: 2.5rem;
     }
 
     .subtitle {
         font-size: 1.1rem;
+    }
+
+    .intro-text {
+        font-size: 0.95rem;
+        margin-top: 1.5rem;
+    }
+
+    .about h3 {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+        text-align: left;
     }
 
     nav ul {
@@ -246,7 +324,11 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
+    .headshot {
+        width: 200px;
+    }
+
+    .hero-text h1 {
         font-size: 2rem;
     }
 
