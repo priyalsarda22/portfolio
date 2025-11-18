@@ -7,121 +7,165 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .project-hero {
-            background: linear-gradient(135deg, #b8c1ec 0%, #d4c1ec 100%);
+            background: linear-gradient(135deg, #d7ccc8 0%, #efebe9 100%);
             padding: 120px 20px 80px;
             text-align: center;
             color: #2d3748;
         }
         .project-hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             margin-bottom: 1rem;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
         .project-hero .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             opacity: 0.9;
-            max-width: 850px;
-            margin: 0 auto 30px;
+            max-width: 800px;
+            margin: 0 auto 20px;
             line-height: 1.7;
             color: #4a5568;
+        }
+        .project-hero .meta {
+            font-size: 1rem;
+            color: #5d4037;
+            font-weight: 600;
+            margin-bottom: 25px;
         }
         .tech-tags {
             margin-top: 25px;
         }
         .tech-tags span {
             display: inline-block;
-            background: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.7);
             color: #4a5568;
             padding: 8px 16px;
             border-radius: 25px;
             margin: 5px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.5);
         }
         .project-content {
             max-width: 1100px;
             margin: 0 auto;
             padding: 60px 20px;
         }
-        .phase-section {
-            margin-bottom: 60px;
+        .section-card {
+            margin-bottom: 50px;
             background: #fefefe;
-            padding: 45px;
+            padding: 40px;
             border-radius: 16px;
-            border-left: 5px solid #b8c1ec;
+            border-left: 5px solid #a1887f;
             box-shadow: 0 4px 20px rgba(0,0,0,0.04);
         }
-        .phase-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 35px;
-        }
-        .phase-number {
-            background: linear-gradient(135deg, #b8c1ec 0%, #a8b8d8 100%);
-            color: #2d3748;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-right: 20px;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(184, 193, 236, 0.4);
-        }
-        .phase-title {
-            font-size: 1.7rem;
-            color: #2d3748;
-            margin: 0;
+        .section-card h2 {
+            font-size: 1.6rem;
+            color: #5d4037;
+            margin: 0 0 25px 0;
             font-weight: 600;
         }
-        .phase-subtitle {
-            color: #718096;
-            margin: 5px 0 0;
-            font-size: 1rem;
+        .section-card h3 {
+            font-size: 1.25rem;
+            color: #5d4037;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
         }
-        .problem-box {
-            background: linear-gradient(135deg, #fef5f5 0%, #fff5f8 100%);
-            padding: 28px;
+        .section-card p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+        .section-card strong {
+            color: #2d3748;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 25px;
             border-radius: 12px;
-            border: 2px solid #fbb6ce;
-            margin: 25px 0;
+            border: 2px solid #ffcc80;
+            margin: 20px 0;
             font-size: 1.05rem;
             line-height: 1.8;
         }
-        .problem-box strong {
-            color: #c53030;
+        .highlight-box strong {
+            color: #e65100;
         }
-        .tech-highlight {
-            background: #fff;
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .info-card {
+            background: white;
             padding: 25px;
             border-radius: 12px;
-            margin: 25px 0;
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
             border: 1px solid #e2e8f0;
         }
-        .tech-highlight h4 {
-            color: #553c9a;
-            margin-bottom: 18px;
-            font-size: 1.15rem;
+        .info-card h4 {
+            color: #5d4037;
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
             font-weight: 600;
         }
-        .tech-highlight ul {
+        .info-card ul {
             margin: 0;
-            padding-left: 20px;
-        }
-        .tech-highlight li {
-            margin: 10px 0;
-            line-height: 1.6;
+            padding-left: 18px;
+            line-height: 1.7;
             color: #4a5568;
         }
-        .tech-highlight li strong {
-            color: #2d3748;
+        .info-card li {
+            margin: 8px 0;
+        }
+        .validation-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .validation-item:last-child {
+            border-bottom: none;
+        }
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d7ccc8 0%, #bcaaa4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .figure-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 25px 0;
+        }
+        .figure-container img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 0 auto;
+            background: #f7f5f0;
+            padding: 15px;
+        }
+        .figure-caption {
+            padding: 18px;
+            font-size: 0.95rem;
+            color: #4a5568;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            background: #fafafa;
+            line-height: 1.5;
+            font-style: italic;
         }
         .image-grid {
             display: grid;
@@ -157,7 +201,7 @@
             line-height: 1.5;
         }
         .image-card .caption strong {
-            color: #553c9a;
+            color: #5d4037;
         }
         .metrics-grid {
             display: grid;
@@ -166,7 +210,7 @@
             margin: 30px 0;
         }
         .metric-card {
-            background: linear-gradient(135deg, #e9d8fd 0%, #fbb6ce 100%);
+            background: linear-gradient(135deg, #d7ccc8 0%, #bcaaa4 100%);
             padding: 25px;
             border-radius: 12px;
             text-align: center;
@@ -175,7 +219,7 @@
         .metric-value {
             font-size: 2rem;
             font-weight: bold;
-            color: #553c9a;
+            color: #3e2723;
             margin-bottom: 8px;
         }
         .metric-label {
@@ -183,80 +227,93 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-        .signal-flow {
-            background: #4a4a4a;
-            color: white;
+        .contributions-box {
+            background: linear-gradient(135deg, #d7ccc8 0%, #bcaaa4 100%);
+            color: #3e2723;
             padding: 30px;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
-        .signal-flow h4 {
-            color: #d4c4a8;
-            margin-bottom: 20px;
-        }
-        .flow-diagram {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-        .flow-box {
-            background: #6b6b6b;
-            padding: 12px 20px;
-            border-radius: 6px;
-            text-align: center;
-            min-width: 140px;
-        }
-        .flow-arrow {
-            font-size: 1.5rem;
-            color: #d4c4a8;
-        }
-        .test-results {
-            background: white;
-            padding: 28px;
             border-radius: 12px;
             margin: 25px 0;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(161, 136, 127, 0.3);
         }
-        .test-results h4 {
-            color: #553c9a;
-            margin-bottom: 20px;
+        .contributions-box h4 {
+            margin: 0 0 20px 0;
+            font-size: 1.2rem;
             font-weight: 600;
+            color: #3e2723;
         }
-        .result-item {
+        .contributions-box ul {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .contributions-box li {
+            margin: 10px 0;
+        }
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .requirement-card {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            color: #e65100;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255, 204, 128, 0.3);
+        }
+        .requirement-card h4 {
+            margin: 0 0 18px 0;
+            font-size: 1.2rem;
+            border-bottom: 2px solid rgba(230, 81, 0, 0.2);
+            padding-bottom: 12px;
+            font-weight: 600;
+            color: #e65100;
+        }
+        .requirement-card ul {
+            margin: 0;
+            padding-left: 18px;
+            line-height: 1.9;
+        }
+        .skills-tags {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 0;
-            border-bottom: 1px solid #e2e8f0;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
         }
-        .result-item:last-child {
-            border-bottom: none;
-        }
-        .result-item span:first-child {
-            color: #4a5568;
+        .skills-tags span {
+            background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%);
+            color: #3e2723;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 500;
         }
-        .result-status {
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .conclusions {
+            background: linear-gradient(135deg, #d7ccc8 0%, #efebe9 100%);
+            color: #2d3748;
+            padding: 45px;
+            border-radius: 16px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(161, 136, 127, 0.3);
+        }
+        .conclusions h3 {
+            margin-bottom: 25px;
             font-weight: 600;
+            font-size: 1.4rem;
+            color: #3e2723;
         }
-        .status-pass {
-            background: #c6f6d5;
-            color: #22543d;
+        .conclusions ul {
+            line-height: 1.9;
+            padding-left: 20px;
         }
-        .status-partial {
-            background: #fefcbf;
-            color: #744210;
+        .conclusions li {
+            margin: 10px 0;
         }
         .back-link {
             display: inline-block;
             margin: 20px 0;
-            color: #553c9a;
+            color: #5d4037;
             text-decoration: none;
             font-weight: 600;
             padding: 8px 0;
@@ -264,40 +321,12 @@
         .back-link:hover {
             text-decoration: underline;
         }
-        .conclusions {
-            background: linear-gradient(135deg, #b8c1ec 0%, #d4c1ec 100%);
-            color: #2d3748;
-            padding: 45px;
-            border-radius: 16px;
-            margin-top: 50px;
-            box-shadow: 0 4px 20px rgba(184, 193, 236, 0.3);
-        }
-        .conclusions h3 {
-            margin-bottom: 25px;
-            font-weight: 600;
-            font-size: 1.4rem;
-        }
-        .conclusions ul {
-            line-height: 1.9;
-        }
-        .conclusions li {
-            margin: 8px 0;
-        }
-        .conclusions strong {
-            color: #2d3748;
-        }
         @media (max-width: 768px) {
             .project-hero h1 {
                 font-size: 2rem;
             }
-            .phase-section {
+            .section-card {
                 padding: 25px;
-            }
-            .flow-diagram {
-                flex-direction: column;
-            }
-            .flow-arrow {
-                transform: rotate(90deg);
             }
         }
     </style>
@@ -317,36 +346,34 @@
     <section class="project-hero">
         <h1>Early Detection Parkinson's Disease Device</h1>
         <p class="subtitle">
-            A wearable accelerometer-based diagnostic system addressing gender disparities in Parkinson's disease detection, specifically designed for females over 60 who present with different motor and psychological symptoms than traditional diagnostic criteria account for.
+            A wearable accelerometer-based diagnostic system addressing gender disparities in Parkinson's disease detection for females over 60
         </p>
+        <p class="meta">Fall 2022 | Georgia Tech</p>
         <div class="tech-tags">
             <span>Wearable Sensors</span>
             <span>Signal Processing</span>
             <span>Arduino</span>
             <span>MATLAB</span>
             <span>3D Printing</span>
-            <span>Healthcare Equity</span>
+            <span>Prototyping</span>
         </div>
     </section>
 
     <div class="project-content">
-        <a href="index.html#projects" class="back-link">Back to Projects</a>
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
 
-        <!-- PHASE I: Problem Definition -->
-        <section class="phase-section">
-            <div class="phase-header">
-                <div class="phase-number">I</div>
-                <div>
-                    <h2 class="phase-title">Problem Definition & User Research</h2>
-                    <p class="phase-subtitle">Identifying the clinical need and understanding user requirements</p>
-                </div>
+        <!-- Overview Section -->
+        <section class="section-card">
+            <h2>Project Overview</h2>
+            <p>
+                With a team of 4, I worked on developing a wearable diagnostic device to address the gender disparity in Parkinson's Disease detection. Females over 60 present with different motor and psychological symptoms than traditional diagnostic criteria account for, leading to delayed diagnosis and treatment.
+            </p>
+
+            <div class="highlight-box">
+                <strong>Problem Statement:</strong> Females over the age of 60 need an accessible, accurate, and holistic alternative diagnostic tool for Parkinson's Disease because of gender differences in motor and psychological presentation during early phases of the disease.
             </div>
 
-            <div class="problem-box">
-                <strong>Problem Statement:</strong> Females over the age of 60 need an accessible, accurate, and holistic alternative diagnostic tool for Parkinson's Disease because of <strong>gender differences in motor and psychological presentation</strong> during early phases of the disease.
-            </div>
-
-            <div class="tech-highlight">
+            <div class="info-card">
                 <h4>Clinical Gap Analysis</h4>
                 <ul>
                     <li><strong>Diagnostic Disparity:</strong> Women present with different prodromal symptoms (fatigue, depression, sleep disturbances) vs. classic tremors</li>
@@ -355,29 +382,32 @@
                     <li><strong>Access to Care:</strong> Less likely to be recommended for Deep Brain Stimulation despite having better outcomes</li>
                 </ul>
             </div>
+        </section>
 
-            <h3 style="margin-top: 40px; color: #553c9a; font-weight: 600;">Design Requirements Engineering</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 25px;">
-                <div style="background: linear-gradient(135deg, #fed7d7 0%, #fbb6ce 100%); color: #742a2a; padding: 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(251, 182, 206, 0.3);">
-                    <h4 style="margin: 0 0 18px 0; font-size: 1.2rem; border-bottom: 2px solid rgba(116, 42, 42, 0.2); padding-bottom: 12px; font-weight: 600;">Critical Requirements</h4>
-                    <ul style="margin: 0; padding-left: 18px; line-height: 1.9;">
+        <!-- Design Requirements -->
+        <section class="section-card">
+            <h2>Design Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>Critical Requirements</h4>
+                    <ul>
                         <li>Equal performance across genders</li>
                         <li>Local data storage for 1 year</li>
                         <li>Automatic metric calculation</li>
                     </ul>
                 </div>
-                <div style="background: linear-gradient(135deg, #feebc8 0%, #fbd38d 100%); color: #744210; padding: 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(251, 211, 141, 0.3);">
-                    <h4 style="margin: 0 0 18px 0; font-size: 1.2rem; border-bottom: 2px solid rgba(116, 66, 16, 0.2); padding-bottom: 12px; font-weight: 600;">Essential Requirements</h4>
-                    <ul style="margin: 0; padding-left: 18px; line-height: 1.9;">
+                <div class="requirement-card">
+                    <h4>Essential Requirements</h4>
+                    <ul>
                         <li>Within +/-5% of clinical standards</li>
                         <li>Components &lt;0.25 kg body weight</li>
                         <li>1 year of daily use durability</li>
                         <li>FDA safety compliant</li>
                     </ul>
                 </div>
-                <div style="background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%); color: #22543d; padding: 28px; border-radius: 12px; box-shadow: 0 4px 12px rgba(154, 230, 180, 0.3);">
-                    <h4 style="margin: 0 0 18px 0; font-size: 1.2rem; border-bottom: 2px solid rgba(34, 84, 61, 0.2); padding-bottom: 12px; font-weight: 600;">Desired Features</h4>
-                    <ul style="margin: 0; padding-left: 18px; line-height: 1.9;">
+                <div class="requirement-card">
+                    <h4>Desired Features</h4>
+                    <ul>
                         <li>Total cost &lt;$100</li>
                         <li>&lt;5 min daily setup time</li>
                         <li>Qualitative user input interface</li>
@@ -386,115 +416,70 @@
             </div>
         </section>
 
-        <!-- PHASE II: Ideation -->
-        <section class="phase-section">
-            <div class="phase-header">
-                <div class="phase-number">II</div>
+        <!-- Concept Development -->
+        <section class="section-card">
+            <h2>Concept Development</h2>
+            <p>
+                Our team developed multiple concepts to address the diagnostic gap. After evaluating each design using a weighted Pugh matrix across manufacturing feasibility, usability, and functionality criteria, we selected two concepts to prototype and test.
+            </p>
+
+            <h3>Concepts Developed</h3>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 30px 0;">
                 <div>
-                    <h2 class="phase-title">Ideation & Concept Development</h2>
-                    <p class="phase-subtitle">Exploring multiple technical solutions through systematic design methods</p>
+                    <div class="image-grid" style="margin: 0;">
+                        <div class="image-card">
+                            <img src="images/parkinsons-project/phase2_p8_img1.jpeg" alt="Accelerometer-equipped stylus">
+                            <div class="caption"><strong>Concept 1: Digital Stylus</strong> 3D-printed stylus with embedded accelerometer for spiral drawing test quantification</div>
+                        </div>
+                        <div class="image-card">
+                            <img src="images/parkinsons-project/concept2_physical.png" alt="Physical prototype of digital stylus">
+                            <div class="caption">Physical prototype of the digital stylus concept with integrated accelerometer</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="image-grid" style="margin: 0;">
+                        <div class="image-card">
+                            <img src="images/parkinsons-project/phase2_p10_img1.jpeg" alt="Wrist accelerometer bracelet">
+                            <div class="caption"><strong>Concept 2: Wrist Bracelet</strong> Wrist-worn accelerometer bracelet for arm swing and tremor detection during daily activities</div>
+                        </div>
+                        <div class="image-card">
+                            <img src="images/parkinsons-project/phase4_p5_img1.jpeg" alt="Physical prototype">
+                            <div class="caption">3D-printed prototype of wrist bracelet with adjustable Velcro strap</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="tech-highlight">
-                <h4>Existing Clinical Solutions Analyzed</h4>
-                <ul>
-                    <li><strong>Hoehn and Yahr Scale:</strong> Subjective staging system (1-5)</li>
-                    <li><strong>MDS-UPDRS:</strong> Movement Disorder Society Unified Parkinson's Disease Rating Scale</li>
-                    <li><strong>Writing/Spiral Tests:</strong> Qualitative analysis of micrographia and tremors</li>
-                    <li><strong>Limitations:</strong> All rely heavily on clinical observation and subjective assessment</li>
-                </ul>
-            </div>
-
-            <h3 style="color: #553c9a; font-weight: 600; margin-top: 30px;">Concepts Created</h3>
-
-            <div class="image-grid">
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase2_p7_img1.jpeg" alt="Qualitative symptom tracking app">
-                    <div class="caption"><strong>Concept 1:</strong> Mobile app for mood, sleep, and bowel movement tracking with data visualization</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase2_p8_img1.jpeg" alt="Accelerometer-equipped stylus">
-                    <div class="caption"><strong>Concept 2:</strong> 3D-printed stylus with embedded accelerometer for spiral drawing test quantification</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase2_p9_img1.jpeg" alt="Pressure-sensing shoe insole">
-                    <div class="caption"><strong>Concept 3:</strong> Pressure sensor shoe inserts for gait analysis (forefront, midfoot, rearfoot distribution)</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase2_p10_img1.jpeg" alt="Wrist accelerometer bracelet">
-                    <div class="caption"><strong>Concept 4:</strong> Wrist-worn accelerometer bracelet for arm swing and tremor detection</div>
-                </div>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Weighted Pugh Matrix Evaluation</h4>
-                <p>Concepts scored against baseline using 14 criteria across 5 categories:</p>
-                <ul>
-                    <li><strong>Manufacturing (27.5%):</strong> Feasibility, adjustability, novelty</li>
-                    <li><strong>Women-Focused (20%):</strong> Portability, appearance, cost</li>
-                    <li><strong>Usability (25%):</strong> Interface simplicity, repeatability, setup time</li>
-                    <li><strong>Physical Attributes (15%):</strong> Durability, safety, weight</li>
-                    <li><strong>Functionality (25%):</strong> Quantifiability, multi-symptom monitoring</li>
-                </ul>
-                <p><strong>Result:</strong> Bracelet accelerometer scored highest (+17.5) due to superior portability, multi-symptom detection, and lower cost.</p>
-            </div>
+            <p style="margin-top: 25px;">
+                <strong>Design Selection:</strong> The wrist bracelet concept scored highest in our evaluation due to superior portability, multi-symptom detection capability, and lower manufacturing cost. This design allows for continuous monitoring during natural movement patterns.
+            </p>
         </section>
 
-        <!-- PHASE III: Prototyping -->
-        <section class="phase-section">
-            <div class="phase-header">
-                <div class="phase-number">III</div>
-                <div>
-                    <h2 class="phase-title">Prototyping & Signal Processing</h2>
-                    <p class="phase-subtitle">Building functional prototypes and developing mathematical models</p>
-                </div>
+        <!-- Signal Processing -->
+        <section class="section-card">
+            <h2>Signal Processing</h2>
+
+            <h3>Signal Processing Pipeline</h3>
+            <div class="figure-container">
+                <img src="images/parkinsons-project/MathModel.png" alt="Signal processing flowchart">
+                <div class="figure-caption">Complete signal processing pipeline from raw acceleration data to symptom detection</div>
             </div>
 
-            <div class="image-grid">
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase3_p5_img1.jpeg" alt="Bracelet accelerometer concept">
-                    <div class="caption"><strong>Bracelet Design:</strong> Wrist-worn accelerometer with Arduino microcontroller in belt pouch for data collection</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase4_p5_img1.jpeg" alt="Physical bracelet prototype">
-                    <div class="caption"><strong>Physical Prototype:</strong> 3D-printed accelerometer housing with adjustable Velcro wrist strap</div>
-                </div>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Mathematical Model - Signal Processing Pipeline</h4>
-                <img src="images/parkinsons-project/MathModel.png" alt="Mathematical model flowchart" style="width: 100%; max-width: 800px; display: block; margin: 20px auto; border-radius: 8px;">
-                <p style="text-align: center; color: #666; margin-top: 10px;">Complete signal processing pipeline from raw acceleration data to symptom detection</p>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Key Metrics Calculated</h4>
-                <ul>
-                    <li><strong>Cadence (steps/min):</strong> Derived from autocorrelation analysis of acceleration data - changes indicate bradykinesia progression</li>
-                    <li><strong>Step Symmetry (0-1):</strong> Calculated from autocorrelation peaks, where 1.0 indicates perfect symmetry - declining values indicate uneven gait</li>
-                    <li><strong>Frequency Band Areas:</strong> Computed via Fourier Transformation
-                        <ul>
-                            <li>Low frequency (0-5 Hz): Normal gait movement patterns</li>
-                            <li>Medium frequency (5-10 Hz): Postural tremor detection range</li>
-                            <li>High frequency (10-25 Hz): Resting tremor identification</li>
-                        </ul>
-                    </li>
-                    <li><strong>Temporal Trend Analysis:</strong> Metrics tracked over multiple measurements to detect increase, decrease, or stability - enabling early detection of symptom progression</li>
-                </ul>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Model Validation & Accuracy Testing</h4>
-                <p>The mathematical model was rigorously tested to ensure accuracy:</p>
-                <ul>
-                    <li><strong>Autocorrelation Validation:</strong> Verified cadence calculations against manual step counting with 98% agreement</li>
-                    <li><strong>Frequency Analysis:</strong> FFT outputs validated against known tremor frequencies (4-6 Hz for PD tremors) from clinical literature</li>
-                    <li><strong>Repeatability Testing:</strong> Same subject tested 20+ times to ensure consistent metric outputs (coefficient of variation < 5%)</li>
-                    <li><strong>Baseline Establishment:</strong> Control data from healthy subjects showed stable metrics over time (< 1% change), confirming model sensitivity to actual changes</li>
-                    <li><strong>Simulated PD Detection:</strong> Model successfully detected 13.7% decline in stride symmetry when PD symptoms were simulated</li>
-                </ul>
-            </div>
+            <h3>Key Metrics Calculated</h3>
+            <ul style="color: #4a5568; line-height: 1.8; padding-left: 20px;">
+                <li><strong>Cadence (steps/min):</strong> Derived from autocorrelation analysis - changes indicate bradykinesia progression</li>
+                <li><strong>Step Symmetry (0-1):</strong> Calculated from autocorrelation peaks - declining values indicate uneven gait</li>
+                <li><strong>Frequency Band Areas:</strong> Computed via Fourier Transformation
+                    <ul>
+                        <li>Low frequency (0-5 Hz): Normal gait patterns</li>
+                        <li>Medium frequency (5-10 Hz): Postural tremor detection</li>
+                        <li>High frequency (10-25 Hz): Resting tremor identification</li>
+                    </ul>
+                </li>
+                <li><strong>Temporal Trend Analysis:</strong> Metrics tracked over time to detect symptom progression</li>
+            </ul>
 
             <div class="metrics-grid">
                 <div class="metric-card">
@@ -510,147 +495,165 @@
                     <div class="metric-label">Data Sampling Rate</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">X, Y, Z</div>
-                    <div class="metric-label">3-Axis Acceleration</div>
+                    <div class="metric-value">98%</div>
+                    <div class="metric-label">Validation Accuracy</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validation & Testing -->
+        <section class="section-card">
+            <h2>Validation & Testing</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+                <div class="figure-container" style="margin: 0;">
+                    <img src="images/parkinsons-project/phase4_p5_img2.jpeg" alt="Testing setup">
+                    <div class="figure-caption">Wrist-worn sensor with belt-mounted Arduino for real-time data collection</div>
+                </div>
+                <div class="info-card" style="margin: 0;">
+                    <h4>Prototype Validation Results</h4>
+                    <div>
+                        <div class="validation-item">
+                            <div class="check-icon">✓</div>
+                            <span>Easy to put on (improved by Trial 4)</span>
+                        </div>
+                        <div class="validation-item">
+                            <div class="check-icon">✓</div>
+                            <span>Non-inhibiting to walking</span>
+                        </div>
+                        <div class="validation-item">
+                            <div class="check-icon">✓</div>
+                            <span>Reasonable and accurate results</span>
+                        </div>
+                        <div class="validation-item">
+                            <div class="check-icon">✓</div>
+                            <span>Comfortable for extended wear</span>
+                        </div>
+                        <div class="validation-item">
+                            <div class="check-icon">✓</div>
+                            <span>Setup time &lt; 5 minutes</span>
+                        </div>
+                        <div class="validation-item">
+                            <div class="check-icon">✓</div>
+                            <span>Durable across multiple trials</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="tech-highlight">
-                <h4>Symptom Detection Mapping</h4>
+            <h3>Model Validation Results</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Healthy Control (20 trials)</h4>
+                    <ul>
+                        <li>Rotational tremor: Stable</li>
+                        <li>Cadence change: 0.7% (minimal)</li>
+                        <li>Stride regularity: 0.2% change</li>
+                        <li><strong>Coefficient of variation: &lt;5%</strong></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Simulated PD (10 trials)</h4>
+                    <ul>
+                        <li>Rotational tremor: <strong>Increased</strong></li>
+                        <li>Cadence change: 7% (elevated variability)</li>
+                        <li>Stride regularity: <strong>-13.7% decrease</strong></li>
+                        <li>Successfully detected symptom changes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4>Stakeholder Feedback</h4>
+                <p><strong>Physician Input:</strong></p>
                 <ul>
-                    <li><strong>Bradykinesia:</strong> Detected via decreasing cadence over time - slower walking speed indicates motor control decline</li>
-                    <li><strong>Uneven Gait:</strong> Identified through declining step symmetry coefficient (values dropping from 0.9+ toward 0.8)</li>
-                    <li><strong>Tremors:</strong> Quantified by increased area under medium frequency band (5-10 Hz) in Fourier analysis</li>
-                    <li><strong>Disease Progression:</strong> All metrics tracked longitudinally with percentage change calculations to identify concerning trends</li>
+                    <li>Requested clear trend visualization for quick assessment</li>
+                    <li>Emphasized metrics translatable to existing diagnostic scales (MDS-UPDRS)</li>
+                    <li>Validated frequency band analysis aligns with known PD tremor characteristics</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Patient Feedback:</strong></p>
+                <ul>
+                    <li>Lightweight and comfortable for extended wear</li>
+                    <li>Discreet design doesn't draw attention</li>
+                    <li>Easy Velcro closure for users with limited dexterity</li>
+                    <li>Valued home-based testing to reduce clinical environment stress</li>
                 </ul>
             </div>
         </section>
 
-        <!-- PHASE IV: Testing -->
-        <section class="phase-section">
-            <div class="phase-header">
-                <div class="phase-number">IV</div>
-                <div>
-                    <h2 class="phase-title">Validation & Testing</h2>
-                    <p class="phase-subtitle">Prototype validation with simulated Parkinson's symptoms</p>
-                </div>
-            </div>
-
-            <div class="image-grid">
-                <div class="image-card">
-                    <img src="images/parkinsons-project/phase4_p5_img2.jpeg" alt="Prototype worn during testing">
-                    <div class="caption"><strong>Testing Setup:</strong> Wrist-worn sensor with belt-mounted Arduino and laptop connection for real-time data collection</div>
-                </div>
-            </div>
-
-            <div class="test-results">
-                <h4>Prototype Validation Results (4 Trials)</h4>
-                <div class="result-item">
-                    <span>Easy to Put On</span>
-                    <span class="result-status status-partial">Improved by Trial 4</span>
-                </div>
-                <div class="result-item">
-                    <span>Non-Inhibiting to Walking</span>
-                    <span class="result-status status-pass">Pass</span>
-                </div>
-                <div class="result-item">
-                    <span>Reasonable Results</span>
-                    <span class="result-status status-pass">Pass</span>
-                </div>
-                <div class="result-item">
-                    <span>Accurate Outputs</span>
-                    <span class="result-status status-pass">Pass</span>
-                </div>
-                <div class="result-item">
-                    <span>Comfortable</span>
-                    <span class="result-status status-pass">Pass</span>
-                </div>
-                <div class="result-item">
-                    <span>Setup < 5 Minutes</span>
-                    <span class="result-status status-pass">Pass</span>
-                </div>
-                <div class="result-item">
-                    <span>Durable for Multiple Trials</span>
-                    <span class="result-status status-pass">Pass</span>
-                </div>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Control vs. Simulated PD Results</h4>
-                <p><strong>Healthy Control (20 trials):</strong></p>
-                <ul>
-                    <li>Rotational tremor motion: Stayed approximately the same</li>
-                    <li>Cadence: 0.7% change (stable)</li>
-                    <li>Stride regularity: 0.2% change (stable)</li>
-                </ul>
-                <p><strong>Simulated PD (10 trials):</strong></p>
-                <ul>
-                    <li>Rotational tremor motion: <strong>Increased over time</strong></li>
-                    <li>Cadence: 7% change (elevated variability)</li>
-                    <li>Stride regularity: <strong>-13.7% decrease</strong> (declining symmetry)</li>
-                </ul>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Statistical Power Analysis</h4>
-                <ul>
-                    <li>Large effect size (Cohen's d = 0.8)</li>
-                    <li>Significance level: alpha = 0.05</li>
-                    <li>Statistical power: 0.95</li>
-                    <li><strong>Required sample:</strong> 35 PD patients + 35 healthy controls for clinical validation</li>
-                </ul>
-            </div>
-
-            <div class="tech-highlight">
-                <h4>Stakeholder Feedback Integration</h4>
-                <p>The device design was refined based on feedback from both clinical professionals and potential users:</p>
-                <ul>
-                    <li><strong>Physician Feedback:</strong>
-                        <ul>
-                            <li>Requested clear data visualization with trend lines for quick assessment</li>
-                            <li>Emphasized need for metrics translatable to existing diagnostic scales (MDS-UPDRS)</li>
-                            <li>Suggested adding percentage change values for easy interpretation</li>
-                            <li>Validated that frequency band analysis aligns with known PD tremor characteristics</li>
-                        </ul>
-                    </li>
-                    <li><strong>Patient/User Feedback:</strong>
-                        <ul>
-                            <li>Confirmed device is lightweight and comfortable for extended wear</li>
-                            <li>Appreciated discreet design that doesn't draw attention to condition</li>
-                            <li>Noted ease of putting on with Velcro closure (important for users with limited dexterity)</li>
-                            <li>Requested longer battery life for continuous monitoring (addressed in future development plans)</li>
-                            <li>Valued home-based testing to reduce stress of clinical environment</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Technical Summary -->
+        <!-- Conclusions -->
         <section class="conclusions">
-            <h3>Technical Innovation Summary</h3>
+            <h3>Key Outcomes & Impact</h3>
             <ul>
-                <li><strong>Hardware:</strong> MPU-6050 3-axis accelerometer, Arduino Nano microcontroller, 3D-printed custom housing</li>
-                <li><strong>Signal Processing:</strong> Fast Fourier Transform for frequency decomposition, autocorrelation for gait periodicity</li>
-                <li><strong>Data Analysis:</strong> MATLAB-based trend analysis with linear regression for temporal progression tracking</li>
-                <li><strong>Multi-Symptom Detection:</strong> Simultaneous monitoring of bradykinesia, tremors, and gait asymmetry</li>
-                <li><strong>Gender-Specific Design:</strong> Focuses on non-motor symptoms and subtle motor changes more common in female presentation</li>
-                <li><strong>Cost-Effective:</strong> Total prototype cost under $50 (vs. clinical-grade systems $500+)</li>
+                <li><strong>Successfully developed</strong> a functional prototype addressing gender disparities in PD diagnosis</li>
+                <li><strong>Validated signal processing model</strong> with 98% agreement on cadence calculations and &lt;5% measurement variability</li>
+                <li><strong>Demonstrated sensitivity</strong> to symptom changes with 13.7% detection of stride symmetry decline</li>
+                <li><strong>Cost-effective solution:</strong> Prototype cost under $50 vs. clinical-grade systems $500+</li>
+                <li><strong>Multi-symptom detection:</strong> Simultaneous monitoring of bradykinesia, tremors, and gait asymmetry</li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Future Development</h3>
+            <ul>
+                <li>Bluetooth integration for wireless data transmission</li>
+                <li>Machine learning classifier for automated PD risk scoring</li>
+                <li>Mobile app for qualitative symptom tracking</li>
+                <li>Extended battery life for continuous monitoring</li>
+                <li>Clinical trials with actual PD patient population</li>
             </ul>
         </section>
 
-        <section style="margin-top: 50px; background: #fefefe; padding: 35px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
-            <h3 style="color: #553c9a; font-weight: 600; margin-bottom: 20px;">Future Development</h3>
-            <ul style="line-height: 1.9; color: #4a5568; padding-left: 20px;">
-                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Bluetooth integration</strong> for wireless data transmission</li>
-                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Machine learning classifier</strong> for automated PD risk scoring</li>
-                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Mobile app integration</strong> for qualitative symptom tracking</li>
-                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Extended battery life</strong> for continuous monitoring</li>
-                <li style="margin: 10px 0;"><strong style="color: #2d3748;">Clinical trials</strong> with actual PD patient population</li>
+        <!-- My Contributions -->
+        <section class="section-card" style="margin-top: 50px;">
+            <h2>My Contributions</h2>
+            <div class="info-grid">
+                <div class="contributions-box">
+                    <h4>Concept Design & Prototyping</h4>
+                    <ul>
+                        <li>Developed the digital stylus concept (Concept 1) for quantifying spiral drawing tests</li>
+                        <li>Designed and fabricated the physical prototype for the wrist bracelet</li>
+                        <li>Created 3D-printed accelerometer housing with adjustable Velcro strap</li>
+                        <li>Integrated MPU-6050 sensor with Arduino Nano microcontroller</li>
+                    </ul>
+                </div>
+                <div class="contributions-box">
+                    <h4>Model Validation & Testing</h4>
+                    <ul>
+                        <li>Conducted repeatability testing across 20+ trials to ensure consistent outputs</li>
+                        <li>Validated autocorrelation calculations against manual step counting (98% agreement)</li>
+                        <li>Performed simulated PD testing to verify model sensitivity to symptom changes</li>
+                        <li>Confirmed detection of 13.7% decline in stride symmetry during simulated symptoms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Technical Skills Demonstrated</h3>
+            <div class="skills-tags">
+                <span>3D Printing & CAD</span>
+                <span>Arduino Programming</span>
+                <span>Sensor Integration</span>
+                <span>Prototype Fabrication</span>
+                <span>Signal Processing</span>
+                <span>Statistical Validation</span>
+                <span>Autocorrelation Analysis</span>
+                <span>Experimental Design</span>
+            </div>
+        </section>
+
+        <!-- What I Learned -->
+        <section class="section-card" style="margin-top: 50px;">
+            <h2>What I Learned</h2>
+            <p>This project significantly enhanced my capabilities as a biomedical engineer:</p>
+            <ul style="color: #4a5568; line-height: 1.9; padding-left: 20px;">
+                <li><strong>Rapid Prototyping:</strong> Gained hands-on experience with 3D printing, CAD design, and iterative prototyping to create functional wearable devices</li>
+                <li><strong>Signal Processing:</strong> Developed understanding of accelerometer data analysis, FFT, autocorrelation, and extracting meaningful metrics from raw sensor data</li>
+                <li><strong>Validation Methods:</strong> Learned rigorous testing protocols including repeatability testing, statistical validation, and sensitivity analysis</li>
+                <li><strong>User-Centered Design:</strong> Understood the importance of gathering stakeholder feedback from both physicians and patients to inform design decisions</li>
+                <li><strong>Team Collaboration:</strong> Worked effectively in a multidisciplinary team, dividing responsibilities and integrating individual contributions into a cohesive final product</li>
+                <li><strong>Healthcare Equity:</strong> Gained awareness of gender disparities in healthcare and the critical need for inclusive diagnostic tools</li>
             </ul>
         </section>
 
-        <a href="index.html#projects" class="back-link">Back to Projects</a>
+        <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
     </div>
 
     <footer>
